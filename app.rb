@@ -49,6 +49,15 @@ require 'sinatra'
 # Your input is john and doe
 
 
+# http://localhost:4567/say/jane/doe
+# http://localhost:4567/say/jane
+  get '/user/:first/?:last?' do
+    "Hello #{params[:first]} #{params[:last]} !!"
+  end
+# Hello jane doe !!
+# Hello jane !!
+
+
 
 
 
