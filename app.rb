@@ -18,9 +18,13 @@ require 'sinatra'
 
 
 # http://localhost:4567/hi
+=begin
+
   get '/:decision' do
     "Your input is #{params[:decision]}"
   end  
+=end
+
 # Your input is hi
 
 
@@ -30,7 +34,7 @@ require 'sinatra'
     "Your input is #{params[:splat]}"
   end
 =end
-# Your input is ["Sinatra"]
+# Your input is ["somethingHere"]
 
 
 =begin
@@ -56,6 +60,36 @@ require 'sinatra'
   end
 # Hello jane doe !!
 # Hello jane !!
+
+
+# http://localhost:4567
+  get '/sin' do
+    redirect 'http://sinatrarb.com', 301
+  end
+# 
+
+
+# http://localhost:4567
+  get '' do
+    ""
+  end
+# 
+
+
+# http://localhost:4567
+  get '' do
+  end
+# 
+
+
+
+
+
+
+
+
+
+
 
 
 
