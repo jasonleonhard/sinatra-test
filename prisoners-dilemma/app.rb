@@ -64,23 +64,28 @@ get '/decision' do
   @b_decision = "betray"
   erb :decision
 end
-#
-#
+# Prisoner's Dilemma
+
+# A's decision: silent
+# B's decision: betray
 
 
 
 
 
-=begin
+# FULL IMPLIMETATION OF PRISONER'S DELEMMA
+# http://localhost:4567/decision/type
+  # http://localhost:4567/decision/silent
+  # http://localhost:4567/decision/betray
 before do
   @heading = "Prisoner's Dilemma"
   @decision = ["silent", "betray"]
 end
 
-get '/decision/:type' do
 
-  @a_decision = params[:type].to_s # me
-  @b_decision = @decision.sample.to_s # confidential, by computer
+get '/decision/:type' do
+  @a_decision = params[:type].to_s    # user input
+  @b_decision = @decision.sample.to_s # confidential and random , by computer
 
   if @a_decision == @b_decision
     if @a_decision == 'silent'
@@ -98,5 +103,23 @@ get '/decision/:type' do
 
   erb :decision
 end
-=end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
